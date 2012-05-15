@@ -7,7 +7,7 @@
 # VERSION is the name of the Pymacs version, as declared within setup.py.
 
 def get_version():
-    for line in open('setup.cfg'):
+    for line in open('setup.cfg', encoding='utf-8'):
         if '=' in line:
             key, value = line.split('=', 1)
             if key.strip() == 'version':
